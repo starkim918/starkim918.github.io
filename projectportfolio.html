@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Kim</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  <link rel="icon" href="assets/starlogo.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="assets/signature.png" alt="Signature Image">
+    </div>
+  </header>
+
+  <nav>
+    <div class="portfolio-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a class="current-page">Project Portfolio</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Star container outside the header -->
+  <div class="star-container">
+    <!-- Generate stars dynamically using JavaScript -->
+    <script>
+      // Create stars with random animation durations and delays
+      for (let i = 0; i < 500; i++) {
+        createStar(i); // Pass index to createStar function
+      }
+
+      // Function to create a star element with random position, animation duration, and delay
+      function createStar(index) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.animationDuration = Math.random() * 4 + 2 + 's'; // Random duration between 2 and 6 seconds
+        
+        // Apply random pastel color to create softer appearance
+        const hue = Math.floor(Math.random() * 360); // Random hue value between 0 and 360 degrees (full spectrum)
+        const saturation = Math.floor(Math.random() * 20 + 30); // Random saturation between 50% and 70%
+        const lightness = Math.floor(Math.random() * 20 + 80); // Random lightness between 70% and 90%
+        star.style.backgroundColor = 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)'; // Set background color using HSL color format
+        
+        document.querySelector('.star-container').appendChild(star); // Append star to the container
+      }
+    </script>
+  </div>
+
+  <div class="container main-content portfolio-page">
+    <h2>Previous Projects</h2>
+    <p>I've worked on lots of fun projects over the past few years! Below are some of my favorites.</p>
+    <br>
+    <p>(Click on a project to learn more!)</p>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&#10032 This Website!</h4>
+    </button>
+    <div class="content">
+      <p><b>Technical Skills:</b> HTML, CSS, Java, Web design</p>
+      <p><b>Soft Skills:</b> Self-teaching new languages (HTML, CSS), Graphic design/aesthetics, <em>Perseverance</em></p>
+      <div class="text-content">
+        <img class="project-image" src="assets/projectportfolio/ThisWebsite.png" alt="Image Description">
+        <p><b>Description:</b></p>
+        <p>I developed this website myself, and it has been a long and hard labor of love (i.e. a complete pain in my butt). I’ve never worked with HTML or CSS, so there was a decent learning curve at first that I have since come to greatly appreciate. "The harder the conflict, the more glorious the triumph", right? This project has slowly become my favorite, as I enjoyed the creative freedom and personal touches. I hope you like it as much as I do, and please feel free to view the source code on Github <a href="https://github.com/starkim918/starkim918.github.io">here</a>!</p>
+      </div>
+      <br>
+    </div>
+    <br>
+    
+    <button type="button" class="collapsible">
+      <h4>&#9998 SK Planner</h4>
+    </button>
+    <div class="content">
+      <p><b>Technical Skills:</b> Swift, Xcode, MacOS development, UI design, Data flow management</p>
+      <p><b>Soft Skills:</b> <em>Couldn't think of any</em> &#9785</p>
+      <div class="text-content">
+        <video class="project-video" src="assets/projectportfolio/SKPlanner.mp4" controls></video>
+        <p><b>Description:</b></p>
+        <p><em>SK Planner</em> was a solo project I developed for MacOS in Xcode during a graduate seminar class. As my final project, I created a comprehensive planner app with a calendar and task lists. In the design I prioritized data consistency across various panels, user intuitiveness, and customizability to suit diverse needs. A demo video showcasing basic app functionality is available to the left, and the code is available on Github <a href="https://github.com/starkim918/SKPlanner">here</a>!</p>
+      </div>
+      <br>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&#10038 Soletta</h4>
+    </button>
+    <div class="content">
+      <p><b>Technical Skills:</b> GameMaker, Game mechanics, Graphics, Pair programming, Github, Agile development</p>
+      <p><b>Soft Skills:</b> Game design, Communication, Teamwork, Creativity, Problem-solving, Puzzle generation, Graphic design/Sprite design</p>
+      <div class="text-content">
+        <video class="project-video" src="assets/projectportfolio/Soletta.mp4" controls></video>
+        <p><b>Description:</b></p>
+        <p><em>Soletta</em> was a graduate seminar project where I partnered with a classmate over the course of the semester to create an original desktop video game using GameMaker Studio. Soletta is a fun and lighthearted space-themed adventure game that offered a diverse range of gameplay modes, including enemy combat, puzzle-solving, and spaceship navigation. A demo video showcasing the game can be found to the left, and the code is available on Github <a href="https://github.com/starkim918/Soletta">here</a>!</p>
+      </div>
+      <br>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&#9786 Spanish Is Fun</h4>
+    </button>
+    <div class="content">
+      <p><b>Technical Skills:</b> Dart, Flutter, XCode, Android Studio, iOS development, Android development, Intuitive UI design</p>
+      <p><b>Soft Skills:</b> Client communication, Teamwork, Working with a non-technical client, Graphic design</p>
+      <div class="text-content">
+        <img class="project-image" src="assets/projectportfolio/SIFLogo.png" alt="Image Description">
+        <p><b>Description:</b></p>
+        <p><em>Spanish is Fun</em> was a 6-week summer project focused on creating a mobile application for a local Spanish school. Developed for both iOS and Android platforms, our team of three undergraduate students aimed to enhance the language learning experience through engaging exercises and interactive features. The app offered a variety of functionality, including flashcards, multiple-choice quizzes, and audio-visual aids for pronunciation practice. Our work prioritized aesthetics and user experience, investing significant effort into design elements such as splash screens, logos, and visual content. The emphasis on quality permeated every aspect of the project, resulting in a polished and user-friendly application! The code remains under contract, so unfortunately there is no access. If you're curious, you can visit the school's website <a href="https://siflanguageschool.com/">here!</a></p>
+      </div>
+      <br>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&nbsp;&#63&nbsp;&nbsp;Clue</h4>
+    </button>
+    <div class="content">
+      <p><b>Technical Skills:</b> Java, Agile development, Computer-generated player moves/choices, Data Structures, Data management</p>
+      <p><b>Soft Skills:</b> Game design, Communication, Teamwork, Management/organization of a large code base</p>
+      <div class="text-content">
+        <video class="project-video" src="assets/projectportfolio/Clue.mp4" controls></video>
+        <p><b>Description:</b></p>
+        <p><em>Clue</em> was an undergraduate project developed over using Java and the Agile development process. I collaborated with a partner to create a desktop version of the classic board game, Clue. Designed as a single-player game, we faced the additional challenge of integrating computer-generated player moves through complex algorithms, adding depth and realism to the gameplay. A demo video showcasing the gameplay can be found to the left. Unfortunately, I am unable to publicly share the code, as the school still uses this project for students. If you’d like to view it, I am happy to add you as a collaborator!</p>
+      </div>
+      <br>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&nbsp;&#9873 Promoting Social Health for International Students</h4>
+    </button>
+    <div class="content">
+      <p><b>Technical Skills:</b> User-driven development, Human-computer Interaction, User testing, Prototype development</p>
+      <p><b>Soft Skills:</b> Stakeholder interviewing, Technical writing, Teamwork, Research conduction, Design implication generation, Communication</p>
+      <div class="text-content">
+        <embed class="project-pdf" src="assets/projectportfolio/HCDPaper.pdf" type="application/pdf">
+        <p><b>Description:</b></p>
+        <p><em>Promoting Social Health for International Students: A Human-Centered Design Approach to Support In-Situ Social Training, Reflection, and Connection</em> was a research project I conducted with three other graduate students that focused on the unique challenges faced by international students on campus. Leveraging social and collaborative computing values and human-centered design techniques, we aimed to understand and address the unique social health needs of this group. Our methodology included questionnaires, interviews, and user testing sessions, which allowed us to uncover problems, specify design implications, generate potential solutions, and develop a prototype application guided by our interviewees. The project details and findings are thoroughly documented in the paper to the left!</p>
+      </div>
+      <br>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&nbsp;&#8856 Hey Siri, Who's Listening?</h4>
+    </button>
+    <div class="content">
+      <p><b>Technical Skills:</b> IoT devices, Security and Privacy implications, Siri functionality</p>
+      <p><b>Soft Skills:</b> Research conduction, Technical writing, Comprehension and compilation of relevant previous research</p>
+      <div class="text-content">
+        <embed class="project-pdf" src="assets/projectportfolio/IOTPaper.pdf" type="application/pdf">
+        <p><b>Description:</b></p>
+        <p><em>Hey Siri, Who's Listening?</em> was a solo research project I completed for a graduate seminar on Privacy and Security in Internet of Things (IoT) devices. This project focused on the Siri voice activation function found in Apple devices. Through comprehensive at-home testing, I aimed to identify the frequency of accidental activations and examine the privacy implications of such behavior. The research revealed suspicious inconsistencies in Siri's behavior, particularly when comparing device responses in active mode versus sleep mode. These findings highlight potential privacy concerns related to unintended activations and data collection practices. The full project details, including methodology and results, are documented in the paper to the left!</p>
+      </div>
+      <br>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">
+      <h4>&nbsp;&#43&nbsp;&nbsp;Additional Coursework</h4>
+    </button>
+    <div class="content">
+      <p>I have completed additional hands-on coursework in...</p>
+      <p>Computer Science:</p>
+      <ul>
+        <li>Data Science</li>
+        <li>Machine Learning</li>
+        <li>Bioinformatics</li>
+        <li>SQL/Databases</li>
+        <li>Algorithms</li>
+        <li>Statistics</li>
+        <li>Theory of Computation</li>
+        <li>Computer Arcitecture</li>
+        <li>Operating Systems</li>
+        <li>Information Security and Privacy</li>
+      </ul>
+      <p>Biology (minor):</p>
+      <ul>
+        <li>Bioinformatics</li>
+        <li>Genetics</li>
+        <li>Immunology</li>
+        <li>Cell Biology and Physiology</li>
+      </ul>
+      <br>
+    </div>
+
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+  </script>
+
+</body>
+</html>
